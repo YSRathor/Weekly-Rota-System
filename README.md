@@ -3,10 +3,10 @@ An independant project that was devised to find a creative solution to organisin
 
 <h2> Instructions for use: </h1>
 
-<p> Download Source Code. </p>
-<p> Modify to own satisfaction. </p>
-<p> Create an executable .jar file. </p>
-<p> Create a folder to place .jar file in and set it as the default location for genereating chore .txt files. </p>
-<p> Download the files in the 'scripts' folder and save them in the same folder. </p>
-<p> Create 3 Basic Tasks to run .jar file, run sendChoresEmail.ps1 script and shutdown.ps1 in Windows Task Scheduler. </p>
-<p> Enjoy automated chores! </p>
+<p>1. Download Source Code. </p>
+<p>2. Modify to own satisfaction. </p>
+<p>3. Create an executable .jar file. </p>
+<p>4. Create a folder to place .jar file in and set it as the default location for genereating chore .txt files. </p>
+<p>5. Download the files in the 'scripts' folder and save them in the same folder. </p>
+<p>6. Create 3 Basic Tasks to run .jar file, run sendChoresEmail.ps1 script and shutdown.ps1 in Windows Task Scheduler. </p>
+<p>7. Enjoy automated chores! </p>

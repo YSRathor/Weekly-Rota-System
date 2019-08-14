@@ -10,3 +10,5 @@ An independant project that was devised to find a creative solution to organisin
 <p>5. Download the files in the 'scripts' folder and save them in the same folder. </p>
 <p>6. Create 3 Basic Tasks to run .jar file, run sendChoresEmail.ps1 script and shutdown.ps1 in Windows Task Scheduler. </p>
 <p>7. Enjoy automated chores! </p>
+
+<h3> Contact for help: <a href="yashwant.rathor@blueyonder.co.uk">Visit W3Schools.com!</a> </h3>

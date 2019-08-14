@@ -1,0 +1,7 @@
+Clean downstairs bathroom,A = Mahendra,B = Alka,C = Mahendra,89
+Clean upstairs bathroom,A = Yashwant,B = Alka,C = Yashwant,47
+Vacuum upstairs,A = Alka,B = Yashwant,C = Mahendra,45
+Vacuum downstairs,A = Yashwant,B = Mahendra,C = Alka,75
+Clean sofas,A = Alka,B = Yashwant,C = Mahendra,14
+Clean Exodia,A = Alka,B = Yashwant,C = Mahendra,23
+Summon Stardust Dragon,A = Alka,B = Yashwant,C = Mahendra,47

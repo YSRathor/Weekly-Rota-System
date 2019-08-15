@@ -182,7 +182,7 @@ public class Profile {
 	 */
 	public String getFilePath() {
 		if (useNickName == true && !person.getNickName().trim().isEmpty()) {
-			filePath = ""C:/Users/Admin/Chores for " + person.getNickName() + ".txt";
+			filePath = "C:/Users/Admin/Chores for " + person.getNickName() + ".txt";
 			return filePath;
 		} else {
 			return filePath;
@@ -254,10 +254,10 @@ public class Profile {
 	 */
 	@Override
 	public String toString() {
-		return "Profile:[person=" + person + ", chores=" + chores + ", noOfChores=" + noOfChores + ", totalChoreTime="
-				+ totalChoreTime + ", averageChoreTime=" + averageChoreTime + ", filePath=" + filePath + ", seperator="
-				+ separator + ", titleLine=" + titleLine + ", currentDateLine=" + currentDateLine + ", wcDateLine="
-				+ wcDateLine + ", seperator2=" + separator2 + ", totalLine=" + totalLine + "]";
+		return "Profile: [person=" + person + ", useNickName=" + useNickName + ", chores=" + chores + ", noOfChores="
+				+ noOfChores + ", totalChoreTime=" + totalChoreTime + ", averageChoreTime=" + averageChoreTime
+				+ ", filePath=" + filePath + ", separator=" + separator + ", separator2=" + separator2 + ", titleLine="
+				+ titleLine + ", currentDateLine=" + currentDateLine + ", wcDateLine=" + wcDateLine + ", totalLine="
+				+ totalLine + "]";
 	}
-
 }

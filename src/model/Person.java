@@ -68,7 +68,7 @@ public class Person implements Comparable<Person> {
 	 *            Identification number of a person.
 	 * 
 	 * @throws IllegalArgumentException
-	 *             If firstName or lastName parameters are empty or null.
+	 *             If firstName, lastName or nickName parameters are empty or null.
 	 */
 	public Person(String firstName, String lastName, String nickName, int ID) {
 		if (firstName.trim().isEmpty() || firstName == null) {
@@ -76,6 +76,9 @@ public class Person implements Comparable<Person> {
 		}
 		if (lastName.trim().isEmpty() || lastName == null) {
 			throw new IllegalArgumentException("You must enter in a last name!");
+		}
+		if (nickName.trim().isEmpty() || nickName == null) {
+			throw new IllegalArgumentException("You must enter in a nick name!");
 		}
 		this.firstName = firstName;
 		this.lastName = lastName;

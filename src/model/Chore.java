@@ -126,7 +126,7 @@ public class Chore implements Comparable<Chore> {
 	 */
 	@Override
 	public String toString() {
-		return "Chore:[choreName=" + choreName + ", choreTime=" + choreTime + "]";
+		return "Chore: [choreName=" + choreName + ", choreTime=" + choreTime + "]";
 	}
 
 }

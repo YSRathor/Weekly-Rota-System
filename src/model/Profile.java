@@ -44,11 +44,11 @@ public class Profile {
 	/**
 	 * A String value to represent a (-) division of a dynamic length.
 	 */
-	private String seperator;
+	private String separator;
 	/**
 	 * A String value to represent a (-) division of a fixed length.
 	 */
-	private String seperator2;
+	private String separator2;
 	/**
 	 * A String value to represent the title line for a text file.
 	 */
@@ -92,8 +92,8 @@ public class Profile {
 		totalChoreTime = 0;
 		averageChoreTime = 0;
 		filePath = "C:/Users/yashw/Desktop/Misc/Rota_System/Chores for " + person.getFirstName() + ".txt";
-		seperator = "";
-		seperator2 = "-----------------------------------";
+		separator = "";
+		separator2 = "-----------------------------------";
 		titleLine = "\r\n" + person.getFirstName() + "'s Chores for Week " + HelperMethods.getWeek() + ":\r\n";
 		currentDateLine = "Date: " + HelperMethods.getCurrentDate() + "\r\n";
 		wcDateLine = "W/C:  " + HelperMethods.getCurrentWCDate() + "\r\n";
@@ -210,12 +210,12 @@ public class Profile {
 	 * @return returns a String with a length dependent on the length of the
 	 *         titleLine.
 	 */
-	public String getSeperator() {
+	public String getSeparator() {
 		for (int i = 0; i < titleLine.trim().length(); i++) {
-			seperator = seperator + "-";
+			separator = separator + "-";
 		}
-		seperator = seperator + "\r\n";
-		return seperator;
+		separator = separator + "\r\n";
+		return separator;
 	}
 
 	/**
@@ -245,7 +245,7 @@ public class Profile {
 	 *         file.
 	 */
 	public String getTotalLine() {
-		totalLine = "\r\n\r\n" + seperator2 + "\r\n" + "Total Chores:  " + noOfChores;
+		totalLine = "\r\n\r\n" + separator2 + "\r\n" + "Total Chores:  " + noOfChores;
 		return totalLine;
 	}
 
@@ -256,8 +256,8 @@ public class Profile {
 	public String toString() {
 		return "Profile:[person=" + person + ", chores=" + chores + ", noOfChores=" + noOfChores + ", totalChoreTime="
 				+ totalChoreTime + ", averageChoreTime=" + averageChoreTime + ", filePath=" + filePath + ", seperator="
-				+ seperator + ", titleLine=" + titleLine + ", currentDateLine=" + currentDateLine + ", wcDateLine="
-				+ wcDateLine + ", seperator2=" + seperator2 + ", totalLine=" + totalLine + "]";
+				+ separator + ", titleLine=" + titleLine + ", currentDateLine=" + currentDateLine + ", wcDateLine="
+				+ wcDateLine + ", seperator2=" + separator2 + ", totalLine=" + totalLine + "]";
 	}
 
 }

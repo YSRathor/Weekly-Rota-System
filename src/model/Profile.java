@@ -148,7 +148,7 @@ public class Profile {
 	 */
 	public String getTotalChoreTimeOutput() {
 		for (Chore c : chores) {
-			totalChoreTime = totalChoreTime + c.getChoreTime();
+			totalChoreTime += c.getChoreTime();
 		}
 
 		String formattedTotalTime = "\r\nTotal Time:    " + String.format("%d Hours", totalChoreTime / 60) + " & "
@@ -212,7 +212,7 @@ public class Profile {
 	 */
 	public String getSeparator() {
 		for (int i = 0; i < titleLine.trim().length(); i++) {
-			separator = separator + "-";
+			separator += "-";
 		}
 		separator = separator + "\r\n";
 		return separator;

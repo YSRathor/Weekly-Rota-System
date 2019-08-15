@@ -3,7 +3,6 @@ package view;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
-
 import model.Chore;
 import model.ChoresAllocation;
 import model.ChoresList;
@@ -56,7 +55,7 @@ public class ImportData {
 			// Close the Scanner Object.
 			in.close();
 
-			// Stores HashMap into ProfileData class.
+			// Stores TreeMap into ProfileData class.
 			pd.setChoresAllocation(ca);
 		}
 	}

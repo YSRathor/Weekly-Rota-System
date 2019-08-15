@@ -78,7 +78,7 @@ public class ChoresAllocation {
 	 */
 	@Override
 	public String toString() {
-		return "ChoresList:[map=" + tMap + "]";
+		return "ChoresAllocation:[map=" + tMap + "]";
 	}
 
 }

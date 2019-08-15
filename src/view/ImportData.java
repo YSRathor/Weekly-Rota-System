@@ -58,7 +58,6 @@ public class ImportData {
 
 			// Stores HashMap into ProfileData class.
 			pd.setChoresAllocation(ca);
-
 		}
 	}
 }

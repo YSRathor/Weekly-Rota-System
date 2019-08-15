@@ -141,7 +141,7 @@ public class ProfileData implements Iterable<Profile> {
 	 */
 	@Override
 	public String toString() {
-		return "Profile:[profileData=" + profiles + ", choresAllocation=" + choresAllocation + "]";
+		return "ProfileData: [profiles=" + profiles + ", choresAllocation=" + choresAllocation + "]";
 	}
 
 }

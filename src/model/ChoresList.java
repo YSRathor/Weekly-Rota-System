@@ -79,6 +79,6 @@ public class ChoresList implements Iterable<Chore> {
 	 */
 	@Override
 	public String toString() {
-		return "ChoresList:[ChoresList=" + choresList + "]";
+		return "ChoresList: [ChoresList=" + choresList + "]";
 	}
 }

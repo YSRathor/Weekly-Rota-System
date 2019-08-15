@@ -9,7 +9,6 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 import model.Chore;
-//import model.Profile;
 import model.ProfileData;
 import view.HelperMethods;
 
@@ -32,10 +31,14 @@ public class ExportData {
 
 	// Main method.
 	public void exportChoresToTextFiles(ProfileData pd) {
-		if (pd != null) {
-			for (int x = 0; x < pd.getProfiles().size(); x++) {
+		// IF statement surrounds code block to ensure no empty or null values are
+		// worked on.
+		if (pd != null && !pd.getProfiles().isEmpty()) {
 
-				// The iterator is assigned and passed a HashMap's iterator method to allow for
+			// Java 8 for-each method enables profiles within pd to be iterated through.
+			pd.forEach(p -> {
+
+				// The iterator is assigned and passed a TreeMap's iterator method to allow for
 				// use below in the while loop.
 				i = pd.getChoresAllocation().returnIterator();
 
@@ -43,11 +46,11 @@ public class ExportData {
 				// Try-catch block surrounds code section due to a file required to be
 				// generated.
 				try {
-					// String variable to store list of stores all together.
+					// String variable to store list of all chores together.
 					String output = "";
 
 					// New file object is created at a specific path.
-					File file = new File(pd.getProfile(x).getFilePath());
+					File file = new File(p.getFilePath());
 
 					// The File Output Stream will write to the file specified in the location
 					// above.
@@ -55,10 +58,10 @@ public class ExportData {
 
 					// The following Strings are retrieved from the model and all converted into
 					// arrays of bytes.
-					byte b[] = pd.getProfile(x).getCurrentDateLine().getBytes();
-					byte b1[] = pd.getProfile(x).getWCDateLine().getBytes();
-					byte b2[] = pd.getProfile(x).getTitle().getBytes();
-					byte b3[] = pd.getProfile(x).getSeperator().getBytes();
+					byte b[] = p.getCurrentDateLine().getBytes();
+					byte b1[] = p.getWCDateLine().getBytes();
+					byte b2[] = p.getTitle().getBytes();
+					byte b3[] = p.getSeparator().getBytes();
 
 					// The converted Strings are written to the file.
 					fos.write(b);
@@ -77,18 +80,17 @@ public class ExportData {
 						currentValue = currentEntry.getValue();
 
 						if (currentValue.get(HelperMethods.getWeekSelector()).substring(3)
-								.contains(pd.getProfile(x).getPerson().getFirstName())) {
-							pd.getProfile(x).addChore(new Chore(currentKey.getChoreName(), currentKey.getChoreTime()));
-							output = output + "  - " + pd.getProfile(x).getAllChores().getChore(index).getChoreName()
-									+ "\r\n";
+								.contains(p.getPerson().getFirstName())) {
+							p.addChore(new Chore(currentKey.getChoreName(), currentKey.getChoreTime()));
+							output += "  - " + p.getAllChores().getChore(index).getChoreName() + "\r\n";
 							index++;
 						} else {
-							output = output + "";
+							output += "";
 						}
 					}
 
 					// Stores total count of chores to profile.
-					pd.getProfile(x).countChores(pd.getProfile(x).getAllChores().choresListSize());
+					p.countChores(p.getAllChores().choresListSize());
 
 					// The 'output' String is trimmed at the end and added to non-trimmed part of
 					// itself to ensure that no newline is generated redundantly at the end of the
@@ -106,17 +108,17 @@ public class ExportData {
 
 					// The 'totalString' String is converted into an array of bytes, and it is then
 					// written to the file.
-					byte t[] = pd.getProfile(x).getTotalLine().getBytes();
+					byte t[] = p.getTotalLine().getBytes();
 					fos.write(t);
 
 					// The Total time line is converted into an array of bytes, and it is then
 					// written to the file.
-					byte t2[] = (pd.getProfile(x).getTotalChoreTimeOutput()).getBytes();
+					byte t2[] = (p.getTotalChoreTimeOutput()).getBytes();
 					fos.write(t2);
 
 					// The Average time line is converted into an array of bytes, and it is then
 					// written to the file.
-					byte t3[] = (pd.getProfile(x).getAverageChoreTimeOutput()).getBytes();
+					byte t3[] = (p.getAverageChoreTimeOutput()).getBytes();
 					fos.write(t3);
 
 					fos.close(); // Output Stream is closed.
@@ -126,7 +128,7 @@ public class ExportData {
 				} catch (IOException e) { // Handles incorrect inputs/outputs.
 					e.printStackTrace();
 				}
-			}
+			});
 		}
 	}
 }

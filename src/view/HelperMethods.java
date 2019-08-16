@@ -121,5 +121,17 @@ public class HelperMethods {
 		// Return the formatted String.
 		return s;
 	}
-	
+
+	public static String getDynamicSeparatorString(String s, String symbol) {
+		// Create a temporary String to be returned.
+		String dynamicString = "";
+		// For loop populates String with parameterised symbol String, with the number
+		// of iterations depending on the input String's length.
+		for (int i = 0; i < s.trim().length(); i++) {
+			dynamicString += symbol;
+		}
+		// Return the String.
+		return dynamicString;
+	}
+
 }

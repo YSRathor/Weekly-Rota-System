@@ -1,3 +1,0 @@
-Yashwant,Rathor,Yash,1,true
-Mahendra,Rathor,2,false
-Alka,Rathor,3,false

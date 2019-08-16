@@ -98,4 +98,27 @@ public class HelperMethods {
 		// returns an int to be used to select the index.
 		return weekSelector;
 	}
+
+	// Useful method to convert an unordered String to capital case.
+	public static String getCapitalisedString(String s) {
+		// String needs to be converted into charArray in order iterate through each
+		// letter.
+		char characters[] = s.toCharArray();
+		// For loop capitalises the letter at the beginning of each String
+		// also ensuring that the following letters are all lower case.
+		for (int i = 0; i < s.length(); i++) {
+			if (i == 0 && characters[i] != ' ' || characters[i] != ' ' && characters[i - 1] == ' ') {
+				if (characters[i] >= 'a' && characters[i] <= 'z') {
+					characters[i] = (char) (characters[i] - 'a' + 'A');
+				}
+			} else if (characters[i] >= 'A' && characters[i] <= 'Z')
+				characters[i] = (char) (characters[i] + 'a' - 'A');
+		}
+
+		// Reassigns charArray final value to original String.
+		s = new String(characters).trim();
+
+		// Return the formatted String.
+		return s;
+	}
 }

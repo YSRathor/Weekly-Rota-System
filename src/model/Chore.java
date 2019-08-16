@@ -51,7 +51,7 @@ public class Chore implements Comparable<Chore> {
 	 *            s.trim() is not empty.
 	 */
 	public void setChoreName(String s) {
-		if (!s.trim().isEmpty() || s != null) {
+		if (!s.trim().isEmpty() && s != null) {
 			choreName = s;
 		}
 	}

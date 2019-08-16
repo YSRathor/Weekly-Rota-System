@@ -28,18 +28,18 @@ public class Chore implements Comparable<Chore> {
 	 * 
 	 * @param choreName
 	 *            Name of the chore.
-	 * @param averageChoreTime
+	 * @param choreTime
 	 *            Time taken to complete the chore.
 	 * @throws IllegalArgumentException
 	 *             If choreName is empty or null.
 	 * 
 	 */
-	public Chore(String choreName, int averageChoreTime) {
+	public Chore(String choreName, int choreTime) {
 		if (choreName.trim().isEmpty() || choreName == null) {
 			throw new IllegalArgumentException("You must enter in a chore name!");
 		}
 		this.choreName = choreName;
-		this.choreTime = averageChoreTime;
+		this.choreTime = choreTime;
 	}
 
 	// Methods.

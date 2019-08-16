@@ -267,7 +267,7 @@ public class Profile {
 	 *         titleLine.
 	 */
 	public String getSeparator() {
-		separator = HelperMethods.getDynamicSeparatorString(titleLine, "*") + "\r\n";
+		separator = HelperMethods.getDynamicSeparatorString(titleLine, "-") + "\r\n";
 		return separator;
 	}
 

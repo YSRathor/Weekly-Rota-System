@@ -26,8 +26,8 @@ public class ImportChoreData {
 	// Main method.
 	public void loadRawData(ProfileData pd) {
 		if (pd != null) {
-			// Creates a Scanner object that will accept the raw data file as an input
-			// stream.
+			// Creates a Scanner object that will accept the choreData.txt file
+			// as an input stream.
 			Scanner in = null;
 			in = new Scanner(ImportChoreData.class.getResourceAsStream("choreData.txt"));
 

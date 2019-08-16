@@ -130,6 +130,7 @@ public class HelperMethods {
 		for (int i = 0; i < s.trim().length(); i++) {
 			dynamicString += symbol;
 		}
+		
 		// Return the String.
 		return dynamicString;
 	}

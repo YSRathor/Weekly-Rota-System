@@ -98,7 +98,7 @@ public class Profile {
 		this.useNickName = useNickName;
 		chores = new ChoresList();
 		noOfChores = 0;
-		filePath = "C:/Users/yashw/Desktop/Misc/Rota_System/Chores for " + person.getFirstName() + ".txt";
+		filePath = "C:/Users/admin/Chores for " + person.getFirstName() + ".txt";
 		currentDateLine = "Date: " + HelperMethods.getCurrentDate() + "\r\n";
 		wcDateLine = "W/C:  " + HelperMethods.getCurrentWCDate() + "\r\n";
 		titleLine = "\r\n" + person.getFirstName() + "'s Chores for Week " + HelperMethods.getWeek() + ":\r\n";
@@ -218,7 +218,7 @@ public class Profile {
 	 */
 	public String getFilePath() {
 		if (useNickName == true && !person.getNickName().trim().isEmpty()) {
-			filePath = "C:/Users/yashw/Desktop/Misc/Rota_System/Chores for " + person.getNickName() + ".txt";
+			filePath = "C:/Users/admin/Chores for " + person.getNickName() + ".txt";
 			return filePath;
 		} else {
 			return filePath;
@@ -267,10 +267,7 @@ public class Profile {
 	 *         titleLine.
 	 */
 	public String getSeparator() {
-		for (int i = 0; i < titleLine.trim().length(); i++) {
-			separator += "-";
-		}
-		separator += "\r\n";
+		separator = HelperMethods.getDynamicSeparatorString(titleLine, "*") + "\r\n";
 		return separator;
 	}
 
@@ -290,20 +287,12 @@ public class Profile {
 	 *         formatted time Strings.
 	 */
 	public String getSeparator2() {
-
 		if (formattedTotalTime.trim().length() > formattedAverageTime.trim().length()) {
-			for (int i = 0; i < formattedTotalTime.trim().length(); i++) {
-				separator2 += "-";
-			}
+			separator2 = HelperMethods.getDynamicSeparatorString(formattedTotalTime, "-");
 		} else if (formattedAverageTime.trim().length() > formattedTotalTime.trim().length()) {
-			for (int i = 0; i < formattedAverageTime.trim().length(); i++) {
-				separator2 += "-";
-			}
+			separator2 = HelperMethods.getDynamicSeparatorString(formattedAverageTime, "-");
 		} else {
-			int length = formattedTotalTime.trim().length();
-			for (int i = 0; i < length; i++) {
-				separator2 += "-";
-			}
+			separator2 = HelperMethods.getDynamicSeparatorString(formattedTotalTime, "-");
 		}
 
 		separator2 = "\r\n\r\n" + separator2 + "\r\n";

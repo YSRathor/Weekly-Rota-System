@@ -32,8 +32,7 @@ public class ImportChoreData {
 			in = new Scanner(ImportChoreData.class.getResourceAsStream("choreData.txt"));
 
 			// These variables allow each element from a line to be parsed, whilst the
-			// counter ensures that each TreeMap key, value map will store the correct
-			// values.
+			// counter ensures that each TreeMap (key, value) will be stored correctly.
 			String line;
 			String[] arr;
 			int lineNo = 0;

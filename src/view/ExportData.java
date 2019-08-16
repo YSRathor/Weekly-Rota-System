@@ -90,7 +90,7 @@ public class ExportData {
 					}
 
 					// Stores total count of chores to profile.
-					p.countChores(p.getAllChores().choresListSize());
+					p.setNoOfChores(p.getAllChores().choresListSize());
 
 					// Sets the correct values for the time output Strings by getting the
 					// int time values and then formatting them.

@@ -49,6 +49,9 @@ public class Person implements Comparable<Person> {
 		if (lastName.trim().isEmpty() || lastName == null) {
 			throw new IllegalArgumentException("You must enter in a last name!");
 		}
+		if (ID < 0) {
+			throw new IllegalArgumentException("You must positive ID value!");
+		}
 		this.firstName = firstName;
 		this.lastName = lastName;
 		nickName = "";
@@ -79,6 +82,9 @@ public class Person implements Comparable<Person> {
 		}
 		if (nickName.trim().isEmpty() || nickName == null) {
 			throw new IllegalArgumentException("You must enter in a nick name!");
+		}
+		if (ID < 0) {
+			throw new IllegalArgumentException("You must positive ID value!");
 		}
 		this.firstName = firstName;
 		this.lastName = lastName;

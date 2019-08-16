@@ -5,6 +5,7 @@ import model.Person;
 import model.Profile;
 import model.ProfileData;
 
+// This class is responsible for importing data from the profileData text file.
 public class ImportProfiles {
 
 	public void loadProfileData(ProfileData pd) {

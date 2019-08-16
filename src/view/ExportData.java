@@ -92,10 +92,16 @@ public class ExportData {
 					// Stores total count of chores to profile.
 					p.countChores(p.getAllChores().choresListSize());
 
+					// Sets the correct values for the time output Strings by getting the
+					// int time values and then formatting them.
+					p.setTotalChoreTime(p.getAllChores());
+					p.setAverageChoreTime(p.getTotalChoreTime(), p.getNoOfChores());
+					p.setTotalChoreTimeOutput(p.getTotalChoreTime());
+					p.setAverageTimeOutput(p.getAverageChoreTime());
+
 					// The 'output' String is trimmed at the end and added to non-trimmed part of
 					// itself to ensure that no newline is generated redundantly at the end of the
 					// file.
-
 					if (!output.isEmpty()) {
 						String trimmed = output.substring(4).trim();
 						output = output.substring(0, 4) + trimmed;
@@ -105,6 +111,11 @@ public class ExportData {
 					// written to the file.
 					byte b0[] = output.getBytes();
 					fos.write(b0);
+
+					// The 'separator2' String is converted into an array of bytes, and it is then
+					// written to the file.
+					byte s[] = p.getSeparator2().getBytes();
+					fos.write(s);
 
 					// The 'totalString' String is converted into an array of bytes, and it is then
 					// written to the file.

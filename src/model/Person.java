@@ -94,7 +94,7 @@ public class Person implements Comparable<Person> {
 	 *            The String to be assigned to the {@link firstName} field.
 	 */
 	public void setFirstName(String f) {
-		if (!f.trim().isEmpty() || f != null) {
+		if (!f.trim().isEmpty() && f != null) {
 			firstName = f;
 		}
 	}
@@ -106,7 +106,7 @@ public class Person implements Comparable<Person> {
 	 *            The String to be assigned to the {@link lastName} field.
 	 */
 	public void setLastName(String l) {
-		if (!l.trim().isEmpty() || l != null) {
+		if (!l.trim().isEmpty() && l != null) {
 			lastName = l;
 		}
 	}
@@ -118,7 +118,7 @@ public class Person implements Comparable<Person> {
 	 *            The String to be assigned to the {@link nickName} field.
 	 */
 	public void setNickName(String n) {
-		if (!n.trim().isEmpty() || n != null) {
+		if (!n.trim().isEmpty() && n != null) {
 			nickName = n;
 		}
 	}

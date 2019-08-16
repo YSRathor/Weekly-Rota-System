@@ -45,8 +45,8 @@ public class ImportData {
 			while (in.hasNextLine()) {
 				line = in.nextLine();
 				arr = line.split(",");
-
-				cl.addChore(new Chore(arr[0], Integer.parseInt(arr[4])));
+							
+				cl.addChore(new Chore(HelperMethods.getCapitalisedString(arr[0]) , Integer.parseInt(arr[4])));
 				ca.addAllocation(cl.getChore(lineNo), new ArrayList<String>(Arrays.asList(arr[1], arr[2], arr[3])));
 
 				lineNo++;

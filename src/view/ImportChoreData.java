@@ -8,7 +8,7 @@ import model.ChoresAllocation;
 import model.ChoresList;
 import model.ProfileData;
 
-// This class is responsible for importing data from choreData text file.
+// This class is responsible for importing data from the choreData text file.
 public class ImportChoreData {
 
 	// Fields.

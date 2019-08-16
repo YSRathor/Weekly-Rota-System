@@ -26,17 +26,17 @@ public class HelperMethods {
 		String weekLetter = "";
 
 		// Populating week numbers for the Week A ArrayList.
-		for (int a = 1; a <= 52; a = a + 3) {
+		for (int a = 1; a <= 52; a += 3) {
 			weekANos.add(a);
 		}
 
 		// Populating week numbers for the Week B ArrayList.
-		for (int b = 2; b <= 52; b = b + 3) {
+		for (int b = 2; b <= 52; b += 3) {
 			weekBNos.add(b);
 		}
 
 		// Populating week numbers for the Week C ArrayList.
-		for (int c = 3; c <= 52; c = c + 3) {
+		for (int c = 3; c <= 52; c += 3) {
 			weekCNos.add(c);
 		}
 

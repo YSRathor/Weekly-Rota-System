@@ -72,21 +72,11 @@ public class Chore implements Comparable<Chore> {
 	}
 
 	/**
-	 * Ensures that the choreName is returned with the correct formatting.
+	 * Allows the choreName value to be accessed.
 	 * 
-	 * @return returns choreName with every word capitalised.
+	 * @return returns choreName.
 	 */
 	public String getChoreName() {
-		char characters[] = choreName.toCharArray();
-		for (int i = 0; i < choreName.length(); i++) {
-			if (i == 0 && characters[i] != ' ' || characters[i] != ' ' && characters[i - 1] == ' ') {
-				if (characters[i] >= 'a' && characters[i] <= 'z') {
-					characters[i] = (char) (characters[i] - 'a' + 'A');
-				}
-			} else if (characters[i] >= 'A' && characters[i] <= 'Z')
-				characters[i] = (char) (characters[i] + 'a' - 'A');
-		}
-		choreName = new String(characters).trim();
 		return choreName;
 	}
 

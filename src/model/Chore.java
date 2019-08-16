@@ -45,32 +45,7 @@ public class Chore implements Comparable<Chore> {
 		this.choreTime = choreTime;
 	}
 
-	// Methods.
-	/**
-	 * Allows choreName to be assigned a valid value from an input parameter.
-	 * 
-	 * @param s
-	 *            The String to be assigned to the {@link choreName} field, if
-	 *            s.trim() is not empty.
-	 */
-	public void setChoreName(String s) {
-		if (!s.trim().isEmpty() && s != null) {
-			choreName = s;
-		}
-	}
-
-	/**
-	 * Allows choreTime to be assigned a value from an input parameter.
-	 * 
-	 * @param i
-	 *            The int to be assigned to the {@link choreTime} field.
-	 */
-	public void setChoreTime(int i) {
-		if (i >= 0) {
-			choreTime = i;
-		}
-	}
-
+	// Methods
 	/**
 	 * Allows the choreName value to be accessed.
 	 * 

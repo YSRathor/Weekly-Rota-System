@@ -173,8 +173,7 @@ public class Profile {
 	 *            the combined total chore time value.
 	 */
 	public void setTotalChoreTimeOutput(int totalChoreTime) {
-		formattedTotalTime = "\r\nTotal Time:    " + String.format("%d Hours", totalChoreTime / 60) + " & "
-				+ String.format("%02d Minutes", totalChoreTime % 60);
+		formattedTotalTime = HelperMethods.checkTimeOutput(totalChoreTime, "Total Time:  ");
 	}
 
 	/**
@@ -185,12 +184,7 @@ public class Profile {
 	 *            the average chore time value.
 	 */
 	public void setAverageTimeOutput(int averageChoreTime) {
-		if (averageChoreTime > 0) {
-			formattedAverageTime = "\r\nAverage Time:  " + String.format("%d Hours", averageChoreTime / 60) + " & "
-					+ String.format("%02d Minutes", averageChoreTime % 60);
-		} else {
-			formattedAverageTime = "\r\nAverage Time:  " + "0 Hours" + " & " + "00 Minutes";
-		}
+		formattedAverageTime = HelperMethods.checkTimeOutput(averageChoreTime, "Average Time:");
 	}
 
 	/**

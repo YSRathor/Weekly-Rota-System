@@ -80,5 +80,4 @@ public class ChoresAllocation {
 	public String toString() {
 		return "ChoresAllocation: [map=" + tMap + "]";
 	}
-
 }

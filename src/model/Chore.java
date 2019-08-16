@@ -38,6 +38,9 @@ public class Chore implements Comparable<Chore> {
 		if (choreName.trim().isEmpty() || choreName == null) {
 			throw new IllegalArgumentException("You must enter in a chore name!");
 		}
+		if (choreTime < 0) {
+			throw new IllegalArgumentException("You must enter in a positive int value!");
+		}
 		this.choreName = choreName;
 		this.choreTime = choreTime;
 	}
@@ -63,7 +66,9 @@ public class Chore implements Comparable<Chore> {
 	 *            The int to be assigned to the {@link choreTime} field.
 	 */
 	public void setChoreTime(int i) {
-		choreTime = i;
+		if (i >= 0) {
+			choreTime = i;
+		}
 	}
 
 	/**

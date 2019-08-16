@@ -9,8 +9,8 @@ public class ImportProfiles {
 
 	public void loadProfileData(ProfileData pd) {
 		if (pd != null) {
-			// Creates a Scanner object that will accept the raw data file as an input
-			// stream.
+			// Creates a Scanner object that will accept the profileData.txt file
+			// as an input stream.
 			Scanner in = null;
 			in = new Scanner(ImportProfiles.class.getResourceAsStream("profileData.txt"));
 
@@ -44,5 +44,5 @@ public class ImportProfiles {
 			in.close();
 		}
 	}
-	
+
 }

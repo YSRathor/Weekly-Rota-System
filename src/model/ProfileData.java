@@ -1,7 +1,6 @@
 package model;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Iterator;
 
 /**
@@ -43,19 +42,6 @@ public class ProfileData implements Iterable<Profile> {
 	public void addProfile(Profile p) {
 		if (p != null) {
 			profiles.add(p);
-		}
-	}
-
-	/**
-	 * Allows the profiles list to be populated with multiple profiles.
-	 * 
-	 * @param cp
-	 *            A collection of Profile objects to be added to the
-	 *            {@link profiles} field.
-	 */
-	public void addProfiles(Collection<Profile> cp) {
-		if (cp != null) {
-			profiles.addAll(cp);
 		}
 	}
 

@@ -1,7 +1,7 @@
-Mow lawn,A = John,B = Lucy,C = John,45
-Wash dishes,A = Mike,B = Lucy,C = Mike,30
-Iron clothes,A = Lucy,B = Mike,C = John,25
-Vacuum house,A = Mike,B = John,C = Lucy,30
-Clean car,A = Lucy,B = Mike,C = John,85
-Take out recycling,A = Lucy,B = Mike,C = John,10
-Get shopping,A = Lucy,B = Mike,C = John,75
+Clean downstairs bathroom,A = Mahendra,B = Alka,C = Mahendra,89
+Clean upstairs bathroom,A = Yashwant,B = Alka,C = Yashwant,47
+Vacuum upstairs,A = Alka,B = Yashwant,C = Mahendra,45
+Vacuum downstairs,A = Yashwant,B = Mahendra,C = Alka,75
+Clean sofas,A = Alka,B = Yashwant,C = Mahendra,14
+Clean Exodia,A = Alka,B = Yashwant,C = Mahendra,23
+Summon Stardust Dragon,A = Alka,B = Yashwant,C = Mahendra,47

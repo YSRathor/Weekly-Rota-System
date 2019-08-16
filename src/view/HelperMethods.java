@@ -99,7 +99,7 @@ public class HelperMethods {
 		return weekSelector;
 	}
 
-	// Useful method to convert an unordered String to capital case.
+	// Useful method to convert a mixed case String into capital case.
 	public static String getCapitalisedString(String s) {
 		// String needs to be converted into charArray in order iterate through each
 		// letter.
@@ -121,4 +121,5 @@ public class HelperMethods {
 		// Return the formatted String.
 		return s;
 	}
+	
 }

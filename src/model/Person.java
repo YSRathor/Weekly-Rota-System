@@ -93,41 +93,6 @@ public class Person implements Comparable<Person> {
 	}
 
 	// Methods.
-	/**
-	 * Allows firstName to be assigned a valid value from an input parameter.
-	 * 
-	 * @param f
-	 *            The String to be assigned to the {@link firstName} field.
-	 */
-	public void setFirstName(String f) {
-		if (!f.trim().isEmpty() && f != null) {
-			firstName = f;
-		}
-	}
-
-	/**
-	 * Allows lastName to be assigned a valid value from an input parameter.
-	 * 
-	 * @param l
-	 *            The String to be assigned to the {@link lastName} field.
-	 */
-	public void setLastName(String l) {
-		if (!l.trim().isEmpty() && l != null) {
-			lastName = l;
-		}
-	}
-
-	/**
-	 * Allows nickName to be assigned a valid value from an input parameter.
-	 * 
-	 * @param n
-	 *            The String to be assigned to the {@link nickName} field.
-	 */
-	public void setNickName(String n) {
-		if (!n.trim().isEmpty() && n != null) {
-			nickName = n;
-		}
-	}
 
 	/**
 	 * Ensures that the firstName is returned with the correct formatting.
@@ -135,16 +100,6 @@ public class Person implements Comparable<Person> {
 	 * @return returns firstName with every word capitalised.
 	 */
 	public String getFirstName() {
-		char characters[] = firstName.toCharArray();
-		for (int i = 0; i < firstName.length(); i++) {
-			if (i == 0 && characters[i] != ' ' || characters[i] != ' ' && characters[i - 1] == ' ') {
-				if (characters[i] >= 'a' && characters[i] <= 'z') {
-					characters[i] = (char) (characters[i] - 'a' + 'A');
-				}
-			} else if (characters[i] >= 'A' && characters[i] <= 'Z')
-				characters[i] = (char) (characters[i] + 'a' - 'A');
-		}
-		firstName = new String(characters).trim();
 		return firstName;
 	}
 
@@ -154,16 +109,6 @@ public class Person implements Comparable<Person> {
 	 * @return returns lastName with every word capitalised.
 	 */
 	public String getLastName() {
-		char characters[] = lastName.toCharArray();
-		for (int i = 0; i < lastName.length(); i++) {
-			if (i == 0 && characters[i] != ' ' || characters[i] != ' ' && characters[i - 1] == ' ') {
-				if (characters[i] >= 'a' && characters[i] <= 'z') {
-					characters[i] = (char) (characters[i] - 'a' + 'A');
-				}
-			} else if (characters[i] >= 'A' && characters[i] <= 'Z')
-				characters[i] = (char) (characters[i] + 'a' - 'A');
-		}
-		lastName = new String(characters).trim();
 		return lastName;
 	}
 
@@ -173,21 +118,7 @@ public class Person implements Comparable<Person> {
 	 * @return returns nickName with every word capitalised.
 	 */
 	public String getNickName() {
-		if (nickName.trim().isEmpty()) {
-			return nickName;
-		} else {
-			char characters[] = nickName.toCharArray();
-			for (int i = 0; i < nickName.length(); i++) {
-				if (i == 0 && characters[i] != ' ' || characters[i] != ' ' && characters[i - 1] == ' ') {
-					if (characters[i] >= 'a' && characters[i] <= 'z') {
-						characters[i] = (char) (characters[i] - 'a' + 'A');
-					}
-				} else if (characters[i] >= 'A' && characters[i] <= 'Z')
-					characters[i] = (char) (characters[i] + 'a' - 'A');
-			}
-			nickName = new String(characters).trim();
-			return nickName;
-		}
+		return nickName;
 	}
 
 	/**

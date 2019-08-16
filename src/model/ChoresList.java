@@ -81,4 +81,5 @@ public class ChoresList implements Iterable<Chore> {
 	public String toString() {
 		return "ChoresList: [ChoresList=" + choresList + "]";
 	}
+
 }

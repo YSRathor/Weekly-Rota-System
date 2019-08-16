@@ -98,4 +98,5 @@ public class Chore implements Comparable<Chore> {
 	public String toString() {
 		return "Chore: [choreName=" + choreName + ", choreTime=" + choreTime + "]";
 	}
+
 }

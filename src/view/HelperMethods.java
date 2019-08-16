@@ -59,10 +59,8 @@ public class HelperMethods {
 
 	// Simple method to allow today's date to be retrieved.
 	public static String getCurrentDate() {
-
 		// Applies the formatting for the date.
 		String currentDate = sdf.format(cal.getTime());
-
 		// returns a String with today's date.
 		return currentDate;
 	}
@@ -122,6 +120,7 @@ public class HelperMethods {
 		return s;
 	}
 
+	// Simple method which allows a separator with a dynamic length to returned.
 	public static String getDynamicSeparatorString(String s, String symbol) {
 		// Create a temporary String to be returned.
 		String dynamicString = "";
@@ -130,9 +129,41 @@ public class HelperMethods {
 		for (int i = 0; i < s.trim().length(); i++) {
 			dynamicString += symbol;
 		}
-		
+
 		// Return the String.
 		return dynamicString;
+	}
+
+	// Useful method which checks the time value and outputs a String to best match
+	// it, so that it can make sense in plain English.
+	public static String checkTimeOutput(int time, String timeStyle) {
+		// Create a temporary String to be returned.
+		String formattedTime;
+
+		// Splits time value into two parts and assigns each section to two ints.
+		int firstDigits = time / 10;
+		int lastDigit = time % 10;
+
+		// Checks whether a number is divisible by 6 and ends in 1.
+		Boolean div = firstDigits % 6 == 0 && lastDigit == 1;
+
+		// IF statements assigns formattedTime a specific value depending on conditions.
+		if (time == 61) {
+			formattedTime = "\r\n" + timeStyle + "  " + String.format("%d Hour", time / 60) + " & "
+					+ String.format("%02d Minute", time % 60);
+		} else if (div == true || time == 1) {
+			formattedTime = "\r\n" + timeStyle + "  " + String.format("%d Hours", time / 60) + " & "
+					+ String.format("%02d Minute", time % 60);
+		} else if (time >= 60 && time < 120) {
+			formattedTime = "\r\n" + timeStyle + "  " + String.format("%d Hour", time / 60) + " & "
+					+ String.format("%02d Minutes", time % 60);
+		} else {
+			formattedTime = "\r\n" + timeStyle + "  " + String.format("%d Hours", time / 60) + " & "
+					+ String.format("%02d Minutes", time % 60);
+		}
+
+		// Return the String.
+		return formattedTime;
 	}
 
 }

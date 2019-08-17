@@ -138,28 +138,28 @@ public class HelperMethods {
 	// it, so that it can make sense in plain English.
 	public static String checkTimeOutput(int time, String timeStyle) {
 		// Create a temporary String to be returned.
-		String formattedTime;
+		String formattedTime = "";
 
-		// Splits time value into two parts and assigns each section to two ints.
-		int firstDigits = time / 10;
-		int lastDigit = time % 10;
+		// Splits time value into hours and minutes.
+		int hours = time / 60;
+		int minutes = time % 60;
 
-		// Checks whether a number is divisible by 6 and ends in 1.
-		Boolean div = firstDigits % 6 == 0 && lastDigit == 1;
-
-		// IF statements assigns formattedTime a specific value depending on conditions.
-		if (time == 61) {
-			formattedTime = "\r\n" + timeStyle + "  " + String.format("%d Hour", time / 60) + " & "
-					+ String.format("%02d Minute", time % 60);
-		} else if (div == true || time == 1) {
-			formattedTime = "\r\n" + timeStyle + "  " + String.format("%d Hours", time / 60) + " & "
-					+ String.format("%02d Minute", time % 60);
-		} else if (time >= 60 && time < 120) {
-			formattedTime = "\r\n" + timeStyle + "  " + String.format("%d Hour", time / 60) + " & "
-					+ String.format("%02d Minutes", time % 60);
+		// IF statements assigns formattedTime a specific value depending on the values
+		// of the 'hours' and 'minutes' variables.
+		if (hours == 1) {
+			if (minutes == 1) {
+				formattedTime = "\r\n" + timeStyle + "  " + String.format("%d Hour", hours) + " & "
+						+ String.format("%02d Minute", minutes);
+			} else {
+				formattedTime = "\r\n" + timeStyle + "  " + String.format("%d Hour", hours) + " & "
+						+ String.format("%02d Minutes", minutes);
+			}
+		} else if (minutes == 1) {
+			formattedTime = "\r\n" + timeStyle + "  " + String.format("%d Hours", hours) + " & "
+					+ String.format("%02d Minute", minutes);
 		} else {
-			formattedTime = "\r\n" + timeStyle + "  " + String.format("%d Hours", time / 60) + " & "
-					+ String.format("%02d Minutes", time % 60);
+			formattedTime = "\r\n" + timeStyle + "  " + String.format("%d Hours", hours) + " & "
+					+ String.format("%02d Minutes", minutes);
 		}
 
 		// Return the String.

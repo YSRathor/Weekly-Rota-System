@@ -98,7 +98,7 @@ public class Profile {
 		this.useNickName = useNickName;
 		chores = new ChoresList();
 		noOfChores = 0;
-		filePath = "C:/Users/admin/Chores for " + person.getFirstName() + ".txt";
+		filePath = "C:/Users/yashw/Desktop/Misc/Rota_System/Chores for " + person.getFirstName() + ".txt";
 		currentDateLine = "Date: " + HelperMethods.getCurrentDate() + "\r\n";
 		wcDateLine = "W/C:  " + HelperMethods.getCurrentWCDate() + "\r\n";
 		titleLine = "\r\n" + person.getFirstName() + "'s Chores for Week " + HelperMethods.getWeek() + ":\r\n";
@@ -216,7 +216,7 @@ public class Profile {
 	 */
 	public String getFilePath() {
 		if (useNickName == true && !person.getNickName().trim().isEmpty()) {
-			filePath = "C:/Users/admin/Chores for " + person.getNickName() + ".txt";
+			filePath = "C:/Users/yashw/Desktop/Misc/Rota_System/Chores for " + person.getNickName() + ".txt";
 			return filePath;
 		} else {
 			return filePath;

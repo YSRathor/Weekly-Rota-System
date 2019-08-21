@@ -1,6 +1,7 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 
 /**
@@ -99,9 +100,11 @@ public class ProfileData implements Iterable<Profile> {
 	/**
 	 * Allows all profiles stored within the ArrayList to be accessed.
 	 * 
-	 * @return returns all Profile objects stored within the ArrayList.
+	 * @return returns all Profile objects stored within the ArrayList in sorted
+	 *         order (by ID number).
 	 */
 	public ArrayList<Profile> getProfiles() {
+		Collections.sort(profiles);
 		return profiles;
 	}
 

@@ -9,6 +9,6 @@ An independant project that was devised to find a creative solution to organisin
 <p>4. Create a folder to place .jar file in and set it as the default location for genereating chore .txt files. </p>
 <p>5. Download the files in the 'scripts' folder and save them in the same folder. </p>
 <p>6. Create 3 Basic Tasks to run .jar file, run sendChoresEmail.ps1 script and shutdown.ps1 in Windows Task Scheduler. </p>
-<p>7. Enjoy automated chores! </p>
+<p>7. Enjoy automated weekly chores! </p>
 
 <h5> Support: <a href = "mailto:yashwant.rathor@blueyonder.co.uk?subject = Feedback&body = Message"> Email Contact </a> </h5>

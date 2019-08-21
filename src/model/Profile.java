@@ -5,10 +5,12 @@ import view.HelperMethods;
 /**
  * This class is responsible for creating a Profile object.
  * 
+ * Implements Comparable to allow elements to be compared.
+ * 
  * @author Yashwant Rathor
  */
 
-public class Profile {
+public class Profile implements Comparable<Profile> {
 
 	// Fields.
 	/**
@@ -345,6 +347,15 @@ public class Profile {
 	 */
 	public String getAverageChoreTimeOutput() {
 		return formattedAverageTime;
+	}
+
+	/**
+	 * Compares two Profile objects with each other, using a person's ID.
+	 */
+	@Override
+	public int compareTo(Profile profile) {
+		return (this.getPerson().getID() < profile.getPerson().getID() ? -1
+				: (this.getPerson().getID() == profile.getPerson().getID() ? 0 : 1));
 	}
 
 	/**

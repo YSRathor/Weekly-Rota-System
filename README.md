@@ -1,5 +1,5 @@
 # Weekly-Rota-System
-An independent project that was devised to find a creative solution to organising a weekly rota for multiple people.
+An independant project that was devised to find a creative solution to organising a weekly rota for multiple people.
 
 <h2> Instructions for use: </h1>
 
